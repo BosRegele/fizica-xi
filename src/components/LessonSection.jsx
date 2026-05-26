@@ -1,5 +1,6 @@
 import FormulaCard from './FormulaCard';
 import MagnitudesGuide from './MagnitudesGuide';
+import VisualGallery from './VisualGallery';
 import Quiz from './Quiz';
 import Problem from './Problem';
 
@@ -122,6 +123,8 @@ export default function LessonSection({ lesson }) {
       )}
 
       <MagnitudesGuide lesson={lesson} accent={c.accent} />
+
+      <VisualGallery lesson={lesson} accent={c.accent} />
 
       {/* Image */}
       {lesson.image && (
