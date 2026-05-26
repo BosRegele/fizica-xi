@@ -1,4 +1,5 @@
 import FormulaCard from './FormulaCard';
+import MagnitudesGuide from './MagnitudesGuide';
 import Quiz from './Quiz';
 import Problem from './Problem';
 
@@ -119,6 +120,8 @@ export default function LessonSection({ lesson }) {
           </div>
         </>
       )}
+
+      <MagnitudesGuide lesson={lesson} accent={c.accent} />
 
       {/* Image */}
       {lesson.image && (
