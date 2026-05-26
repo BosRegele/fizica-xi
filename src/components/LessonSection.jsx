@@ -133,6 +133,28 @@ export default function LessonSection({ lesson }) {
         </div>
       )}
 
+      {/* Real Life Examples */}
+      {lesson.realLife && lesson.realLife.length > 0 && (
+        <>
+          <div style={{ height: 1, background: 'linear-gradient(90deg, transparent, #1a2d48, transparent)', margin: '28px 0' }} />
+          <h3 style={{ fontSize: '1.05rem', fontWeight: 700, color: c.accent, marginBottom: 14 }}>
+            🌍 În viața reală
+          </h3>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 14, marginBottom: 28 }}>
+            {lesson.realLife.map((item, i) => (
+              <div key={i} style={{
+                background: '#07122a', border: `1px solid ${c.border}`,
+                borderRadius: 12, padding: '16px 18px',
+              }}>
+                <div style={{ fontSize: '1.5rem', marginBottom: 8 }}>{item.icon}</div>
+                <div style={{ fontSize: '0.9rem', fontWeight: 700, color: '#e2e8f0', marginBottom: 6 }}>{item.title}</div>
+                <div style={{ fontSize: '0.85rem', color: '#94a3b8', lineHeight: 1.6 }}>{item.text}</div>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
+
       <div style={{ height: 1, background: 'linear-gradient(90deg, transparent, #1a2d48, transparent)', margin: '28px 0' }} />
 
       {/* Quiz */}
